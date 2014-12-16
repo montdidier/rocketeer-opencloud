@@ -1,0 +1,27 @@
+{
+	"name": "montdidier/rocketeer-opencloud",
+	"description": "Opencloud plugin for Rocketeer",
+  "license": "MIT",
+  "keywords": [
+    "rocketeer",
+    "deployment",
+    "openstack",
+    "rackspace"
+  ],
+	"authors": [
+		{
+			"name": "Chris Kruger",
+			"email": "chris.kruger+rocketeer@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"anahkiasen/rocketeer": "2.0.*@dev",
+		"illuminate/support": "~4.2",
+	},
+	"autoload": {
+		"psr-4": {
+			"Rocketeer\\Plugins\\OpenStack\\": "src/OpenStack"
+		}
+	}
+}
