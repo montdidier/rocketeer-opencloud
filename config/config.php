@@ -2,7 +2,9 @@
 
 return array(
   'username' => '',
-  'token' => ''
+  'api_key' => '',
+  'region' => '',
+  'autoscale_group' => ''
 );
 
 ?>
