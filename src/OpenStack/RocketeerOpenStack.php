@@ -1,7 +1,7 @@
 <?php
 namespace Rocketeer\Plugins\OpenStack;
 
-class RocketeerOpenStack extends AbstractNotifier
+class RocketeerOpenStack extends AbstractPlugin
 {
   /**
    * Setup the plugin
