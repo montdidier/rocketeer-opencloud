@@ -3,6 +3,9 @@ namespace Rocketeer\Plugins\OpenStack;
 
 class RocketeerOpenStack extends AbstractPlugin
 {
+
+  private $client;
+
   /**
    * Setup the plugin
    *
@@ -24,8 +27,15 @@ class RocketeerOpenStack extends AbstractPlugin
    */
   public function register(Container $app)
   {
-    $app->bind('opencloud', function ($app) {
-      return null;
+    $this->client =
+      new Rackspace(Rackspace::US_IDENTITY_ENDPOINT, array(
+                    'username' => $app['config']->get('rocketeer-opencloud::username'),
+                    'apiKey' => $app['config']->get('rocketeer-opencloud::apiKey')
+                  ));
+       # $app['config']->get('rocketeer-opencloud::groupName');
+
+    $app->bind('autoscale', function ($app) {
+      return new AutoScaleServiceFacade($client, $app['config']->get('rocketeer-opencloud::region'));
     });
   }
 }
