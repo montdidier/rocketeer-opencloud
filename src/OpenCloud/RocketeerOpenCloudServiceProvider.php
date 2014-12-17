@@ -1,9 +1,9 @@
 <?php
-namespace Rocketeer\Plugins\OpenStack;
+namespace Rocketeer\Plugins\OpenCloud;
 
 use Rocketeer\Facades\Rocketeer;
 
-class RocketeerOpenStackServiceProvider extends ServiceProvider
+class RocketeerOpenCloudServiceProvider extends ServiceProvider
 {
   /*
    * Register classes
@@ -21,7 +21,7 @@ class RocketeerOpenStackServiceProvider extends ServiceProvider
    */
   public function boot()
   {
-    Rocketeer::plugin('Rocketeer\Plugins\OpenStack\RocketeerOpenStack');
+    Rocketeer::plugin('Rocketeer\Plugins\OpenCloud\RocketeerOpenCloud');
   }
 }
 

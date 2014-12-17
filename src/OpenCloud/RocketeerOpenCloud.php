@@ -1,7 +1,7 @@
 <?php
-namespace Rocketeer\Plugins\OpenStack;
+namespace Rocketeer\Plugins\OpenCloud;
 
-class RocketeerOpenStack extends AbstractPlugin
+class RocketeerOpenCloud extends AbstractPlugin
 {
 
   private $client;
