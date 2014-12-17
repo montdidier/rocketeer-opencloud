@@ -33,8 +33,8 @@ class AutoScaleServiceFacade extends AbstractServiceFacade
    */
   public function addresses($groupName)
   {
-    $autoscaleService = $client->autoscaleService(null, $this->region);
-    $computeService = $client->computeService(null, $this->region);
+    $autoscaleService = $this->client->autoscaleService(null, $this->region);
+    $computeService = $this->client->computeService(null, $this->region);
     $groupList = $autoscaleService->groupList();
 
     $addresses = array();

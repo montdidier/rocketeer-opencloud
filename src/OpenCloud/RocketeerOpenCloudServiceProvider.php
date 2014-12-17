@@ -1,8 +1,12 @@
 <?php
 namespace Rocketeer\Plugins\OpenCloud;
 
+use Illuminate\Support\ServiceProvider;
 use Rocketeer\Facades\Rocketeer;
 
+/**
+ * Register the OpenCloud plugin with the Laravel framework and Rocketeer
+ */
 class RocketeerOpenCloudServiceProvider extends ServiceProvider
 {
   /*
